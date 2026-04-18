@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Center - HALO3K</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="dashboard-container">
+        
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <i class="fas fa-arrow-left back-icon" id="menu-close"></i>
@@ -35,63 +35,54 @@
         <main class="main-content">
             <header class="main-header">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <i class="fas fa-bars mobile-menu-btn" id="menu-toggle"></i>
+                    <i class="fas fa-bars mobile-menu-btn" id="menu-toggle" style="font-size: 20px; color: var(--neon-blue); cursor: pointer;"></i>
                     <h2>Data Center</h2>
                 </div>
                 <div class="user-profile">
-                    <div class="user-info">
-                        <span class="user-name">DB Admin</span>
-                        <span class="user-role">Sincronizado</span>
-                    </div>
                     <div class="user-avatar">DB</div>
                 </div>
             </header>
 
-            <div class="content-grid">
-                <section class="card neon-border" style="grid-column: span 1;">
-                    <div class="search-bar">
+            <div class="content-grid" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                
+                <section class="card neon-border">
+                    <div class="search-bar" style="margin-top: 0;">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Filtrar registros técnicos...">
+                        <input type="text" placeholder="Buscar registros...">
                     </div>
                 </section>
 
-                <section class="data-section card neon-border" style="grid-column: span 1;">
+                <section class="card neon-border">
                     <header class="metrics-header">
-                        <h3>Registros de Instituciones</h3>
+                        <h3>Registros de Sistema</h3>
                     </header>
-                    
-                    <div class="table-container">
-                        <table>
-                            <thead>
+                    <div class="table-container" style="width: 100%; overflow-x: auto;">
+                        <table style="min-width: 500px;"> <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>INSTITUCIÓN</th>
-                                    <th>ESPECIALIDAD</th>
                                     <th>ESTADO</th>
-                                    <th>ACCION</th>
+                                    <th>LINK</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#HK-921</td>
-                                    <td>Liceo Politecnico A-2</td>
-                                    <td>Programación</td>
-                                    <td><span class="status online">Activo</span></td>
-                                    <td><i class="fas fa-ellipsis-h" style="cursor:pointer;"></i></td>
+                                    <td>#HK-21</td>
+                                    <td>Liceo A-21</td>
+                                    <td><span class="status online">OK</span></td>
+                                    <td><i class="fas fa-external-link-alt"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>#HK-841</td>
-                                    <td>Liceo Industrial A-21</td>
-                                    <td>Telecom</td>
-                                    <td><span class="status online">Activo</span></td>
-                                    <td><i class="fas fa-ellipsis-h" style="cursor:pointer;"></i></td>
+                                    <td>#HK-45</td>
+                                    <td>Inacap</td>
+                                    <td><span class="status online">OK</span></td>
+                                    <td><i class="fas fa-external-link-alt"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>#HK-332</td>
-                                    <td>Inacap Santiago</td>
-                                    <td>Ciberseguridad</td>
-                                    <td><span class="status offline">Pendiente</span></td>
-                                    <td><i class="fas fa-ellipsis-h" style="cursor:pointer;"></i></td>
+                                    <td>#HK-09</td>
+                                    <td>Duoc UC</td>
+                                    <td><span class="status offline">ERR</span></td>
+                                    <td><i class="fas fa-external-link-alt"></i></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -107,10 +98,14 @@
         const sidebar = document.getElementById('sidebar');
 
         if(menuToggle) {
-            menuToggle.onclick = () => sidebar.classList.add('active');
+            menuToggle.onclick = () => {
+                sidebar.style.left = "0";
+            };
         }
         if(menuClose) {
-            menuClose.onclick = () => sidebar.classList.remove('active');
+            menuClose.onclick = () => {
+                sidebar.style.left = "-100%";
+            };
         }
     </script>
 </body>
