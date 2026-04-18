@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <i class="fas fa-arrow-left back-icon"></i>
                 <div class="logo">
@@ -36,9 +36,15 @@
         </aside>
 
         <main class="main-content">
-            <header class="main-header">
-                <h2>Dashboard</h2>
-            </header>
+           <header class="main-header">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <i class="fas fa-bars mobile-menu-btn" id="menu-toggle"></i>
+        <h2></h2>
+    </div>
+    <div class="user-profile">
+        <div class="user-avatar">AD</div>
+    </div>
+</header>
 
             <div class="content-grid">
                 <section class="offer-section card neon-border">
@@ -143,5 +149,29 @@
             </div>
         </main>
     </div>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        // Buscamos la flecha de cerrar por su clase
+        const menuClose = document.querySelector('.back-icon');
+
+        if (menuToggle && sidebar) {
+            menuToggle.onclick = function(e) {
+                e.preventDefault();
+                sidebar.classList.add('active');
+                console.log("Menú abierto"); // Para que pruebes en consola
+            };
+        }
+
+        if (menuClose && sidebar) {
+            menuClose.onclick = function(e) {
+                e.preventDefault();
+                sidebar.classList.remove('active');
+                console.log("Menú cerrado");
+            };
+        }
+    });
+</script>
 </body>
 </html>
