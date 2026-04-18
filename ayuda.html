@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda - HALO3K</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-arrow-left back-icon" id="menu-close"></i>
+                <div class="logo">
+                    <span class="logo-icon">H</span>
+                    <h1>HALO3K</h1>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <a href="dashboard.html" class="btn-link"><li><i class="fas fa-home"></i> Dashboard</li></a>
+                    <a href="oficinas.html" class="btn-link"><li><i class="fas fa-file-contract"></i> Oficinas</li></a>
+                    <a href="analisis.html" class="btn-link"><li><i class="fas fa-chart-pie"></i> Análisis</li></a>
+                    <a href="candidatos.html" class="btn-link"><li><i class="fas fa-users"></i> Candidatos</li></a>
+                    <a href="datos.html" class="btn-link"><li><i class="fas fa-database"></i> Datos</li></a>
+                    <a href="herramientas.html" class="btn-link"><li><i class="fas fa-wrench"></i> Herramientas</li></a>
+                    <a href="info.html" class="btn-link"><li><i class="fas fa-info-circle"></i> Info</li></a>
+                    <a href="ayuda.html" class="btn-link"><li class="active"><i class="fas fa-question-circle"></i> Ayuda</li></a>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-bars mobile-menu-btn" id="menu-toggle"></i>
+                    <h2>Soporte & Ayuda</h2>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">?</div>
+                </div>
+            </header>
+
+            <div class="content-grid">
+                
+                <section class="card neon-border" style="grid-column: 1 / -1;">
+                    <h3>¿En qué podemos ayudarte?</h3>
+                    <div class="search-bar" style="max-width: 100%; margin-top: 15px;">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Escribe tu duda o problema técnico...">
+                    </div>
+                </section>
+
+                <section class="card neon-border">
+                    <header class="metrics-header">
+                        <h3><i class="fas fa-book-open" style="color: var(--neon-blue); margin-right: 10px;"></i> FAQ Comunes</h3>
+                    </header>
+                    <div style="margin-top: 20px;">
+                        <details style="margin-bottom: 15px; cursor: pointer; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px;">
+                            <summary style="font-weight: bold; color: var(--neon-blue);">¿Cómo funciona el Match de IA?</summary>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">Nuestro motor analiza las competencias técnicas del CV y las compara con los requerimientos de la industria en milisegundos.</p>
+                        </details>
+                        <details style="margin-bottom: 15px; cursor: pointer; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px;">
+                            <summary style="font-weight: bold; color: var(--neon-blue);">¿Cómo exportar reportes?</summary>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">Ve a la sección "Análisis", selecciona el periodo y haz clic en el botón de descarga en la esquina superior.</p>
+                        </details>
+                        <details style="cursor: pointer; padding-bottom: 10px;">
+                            <summary style="font-weight: bold; color: var(--neon-blue);">Problemas de sincronización</summary>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">Asegúrate de tener conexión estable. Si el error persiste, limpia la caché en "Herramientas".</p>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="card neon-border">
+                    <header class="metrics-header">
+                        <h3><i class="fas fa-headset" style="color: var(--neon-blue); margin-right: 10px;"></i> Soporte Directo</h3>
+                    </header>
+                    <div style="margin-top: 20px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 45px; height: 45px; background: rgba(0,242,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-envelope" style="color: var(--neon-blue);"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: bold;">Correo Electrónico</div>
+                                <div style="font-size: 13px; color: var(--text-muted);">soporte@halo3k.ai</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 45px; height: 45px; background: rgba(0,242,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-discord" style="color: var(--neon-blue);"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: bold;">Comunidad Discord</div>
+                                <div style="font-size: 13px; color: var(--text-muted);">Canal #help-desk</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="width: 100%;">Abrir Ticket de Soporte</button>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const sidebar = document.getElementById('sidebar');
+
+        if(menuToggle) {
+            menuToggle.onclick = () => {
+                sidebar.classList.add('active');
+            };
+        }
+        if(menuClose) {
+            menuClose.onclick = () => {
+                sidebar.classList.remove('active');
+            };
+        }
+
+        // Cerrar menú al hacer clic fuera (opcional para experiencia móvil pro)
+        window.onclick = function(event) {
+            if (event.target == sidebar) {
+                sidebar.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
