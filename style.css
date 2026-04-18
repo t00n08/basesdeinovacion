@@ -308,3 +308,43 @@ td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.02); font-size: 
 /* --- UTILS --- */
 .status.online::before { content: ''; display: inline-block; width: 8px; height: 8px; background: #00ff9d; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px #00ff9d; }
 
+.neon-border {
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* --- Botones --- */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+}
+
+.btn-primary {
+    background-color: var(--primary-neon);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
