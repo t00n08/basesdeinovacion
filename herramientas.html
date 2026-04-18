@@ -11,7 +11,7 @@
     <div class="dashboard-container">
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <i class="fas fa-arrow-left back-icon"></i>
+                <i class="fas fa-arrow-left back-icon" id="menu-close"></i>
                 <div class="logo">
                     <span class="logo-icon">H</span>
                     <h1>HALO3K</h1>
@@ -23,8 +23,8 @@
                     <a href="oficinas.html" class="btn-link"><li><i class="fas fa-file-contract"></i> Oficinas</li></a>
                     <a href="analisis.html" class="btn-link"><li><i class="fas fa-chart-pie"></i> Análisis</li></a>
                     <a href="candidatos.html" class="btn-link"><li><i class="fas fa-users"></i> Candidatos</li></a>
-                    <a href="datos.html" class="btn-link"><li><i class="fas fa-database"></i> Datos</li></a>
-                    <a href="herramientas.html" class="btn-link"><li class="active"><i class="fas fa-wrench"></i> Herramientas</li></a>
+                    <a href="datos.html" class="btn-link"><li class="active"><i class="fas fa-database"></i> Datos</li></a>
+                    <a href="herramientas.html" class="btn-link"><li><i class="fas fa-wrench"></i> Herramientas</li></a>
                     <a href="info.html" class="btn-link"><li><i class="fas fa-info-circle"></i> Info</li></a>
                     <a href="ayuda.html" class="btn-link"><li><i class="fas fa-question-circle"></i> Ayuda</li></a>
                 </ul>
@@ -33,7 +33,12 @@
 
         <main class="main-content">
             <header class="main-header">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+        <i class="fas fa-bars mobile-menu-btn" id="menu-toggle"></i> 
+
+    </div>
                 <h2>Technical Tools Center</h2>
+                
                 <div class="user-profile">
                     <div class="user-info">
                         <span class="user-name">Admin Core</span>
@@ -41,6 +46,7 @@
                     </div>
                     <div class="user-avatar">AI</div>
                 </div>
+                
             </header>
 
             <div class="content-grid">

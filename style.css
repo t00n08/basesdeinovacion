@@ -348,3 +348,17 @@ button {
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -100%; /* Escondido por defecto */
+        transition: all 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0 !important; /* Se muestra al hacer clic */
+    }
+}
+#menu-toggle {
+    font-size: 20px; color: var(--neon-blue); cursor: pointer;
+}
