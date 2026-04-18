@@ -104,28 +104,29 @@
         </main>
     </div>
 
-    <script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
         const sidebar = document.getElementById('sidebar');
+        // Buscamos la flecha de cerrar por su clase
+        const menuClose = document.querySelector('.back-icon');
 
-        if(menuToggle) {
-            menuToggle.onclick = () => {
+        if (menuToggle && sidebar) {
+            menuToggle.onclick = function(e) {
+                e.preventDefault();
                 sidebar.classList.add('active');
-            };
-        }
-        if(menuClose) {
-            menuClose.onclick = () => {
-                sidebar.classList.remove('active');
+                console.log("Menú abierto"); // Para que pruebes en consola
             };
         }
 
-        // Cerrar menú al hacer clic fuera (opcional para experiencia móvil pro)
-        window.onclick = function(event) {
-            if (event.target == sidebar) {
+        if (menuClose && sidebar) {
+            menuClose.onclick = function(e) {
+                e.preventDefault();
                 sidebar.classList.remove('active');
-            }
+                console.log("Menú cerrado");
+            };
         }
-    </script>
+    });
+</script>
 </body>
 </html>

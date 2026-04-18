@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <i class="fas fa-arrow-left back-icon"></i>
                 <div class="logo">
@@ -80,5 +80,29 @@
             </div>
         </main>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        // Buscamos la flecha de cerrar por su clase
+        const menuClose = document.querySelector('.back-icon');
+
+        if (menuToggle && sidebar) {
+            menuToggle.onclick = function(e) {
+                e.preventDefault();
+                sidebar.classList.add('active');
+                console.log("Menú abierto"); // Para que pruebes en consola
+            };
+        }
+
+        if (menuClose && sidebar) {
+            menuClose.onclick = function(e) {
+                e.preventDefault();
+                sidebar.classList.remove('active');
+                console.log("Menú cerrado");
+            };
+        }
+    });
+</script>
 </body>
 </html> 
